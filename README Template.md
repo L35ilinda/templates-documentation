@@ -5,17 +5,43 @@ The productivity solution is composed of an
 - An Analysis Services Model & 
 - Power BI dashboard
 
-## Purpose of the solution
+## Description of the Solution
 
-The purpose of the dashboard is the measure work done in the Workflow systems AWD. 
+*What business process are we measuring? What is the subject of the data model or report? i.e. Queries, Transactions, Work Done by users via AWD etc.*
 
-## Audience:
+*Against what main attributes are we measuring the subject against? e.g. transactions over time, per product, per user etc.*
+
+## Purpose & Context of the Solution
+
+*Background of the business need, or why does the solution exist?*
+*What does the user do with the data or insight?*
+*How/From Where do they consume the data?*
+*When do they need to consume the data?*
+
+*If it is a process that is consuming the data, please ensure to document the schema expected, naming conventions and the process to change these*
+
+When an instruction is received it goes through various stages of the business process, eg indexing, QC, Capture, Auth etc. 
+Each of these stages have work that must be done on each and each are represented by a composite if Queue & Status.
+
+## Audience
+*Who is the consumer of the data?*
+
 - FNZ internal Team Leaders and Managers
 - Client Team Leaders and Managers (only SCI & NinetyOne IP at time of writing).
 
-## Context:
-When an instruction is received it goes through various stages of the business process, eg indexing, QC, Capture, Auth etc. 
-Each of these stages have work that must be done on each and each are represented by a composite if Queue & Status.
+
+
+### In Scope / Out of Scope
+*e.g.*
+
+*"This dataset only includes instructions that a closed"*
+
+*"Only includes work that is facilited by within AWD"*
+
+*"stages in the business process must be mapped correctly in AWD, i.e. each distinct busines process is mapped to one queue only and vice versa."*
+
+*"Data does not include instructions that are open"*
+
 
 ## Definition of Work Completed
 
@@ -23,7 +49,7 @@ The measure of one piece of work completed is if a work item (instruction) is mo
 
 # Getting Started
 This solution is comprised of the following 
-## Tool Overview:
+## Tool Overview
 ### Tools Used:
 - SSIS (on prem)
 - SQL Server (on prem)
@@ -37,7 +63,7 @@ This solution is comprised of the following
 - PowerShell/Bash
 - Dax
 
-## Schedule:
+## Schedule
 *How often does the data destination scheduled to refresh?*
 *How often does the data source update*
 
@@ -45,10 +71,11 @@ This solution is comprised of the following
 
 ## Expected Latency
 *How often does the user expect to use the data?*
+
 *How old should the data be when the user uses it?*
 
 
-## Dependencies:
+## Dependencies
 ### Data Sources
 - *SILGRY-SQLDTC.DataWarehouseStage*
 - *SILGRY-SQLDTC.DataWarehouse*
@@ -71,6 +98,16 @@ This solution is comprised of the following
 - *The ETL job ran successfully without errors?* 
 
 
+# Data Quality Validations
+*How is the data collected being validated?* 
+*i.e. If the data in the data source changes and will make the data in the dashboard or report incorrect, how is this being catered for?*
+
+*e.g.* 
+- *Describe Primary keys,* 
+- *Describe Foreign keys,* 
+- *Describe the strictness of data types, etc*
+
+
 # Security & Privacy
 ## Security
 *How is access to the data controlled? eg. Active Directory, Azure Active Directory* 
@@ -82,6 +119,5 @@ This solution is comprised of the following
 *Considering the distribution and how the data is consumed, what Privacy controls are  implemented to control what data can be seen? eg. RLS via DAX in Power BI, RLS via DAX in Analysis Services*
 
 # Important Notes
-**NB: If work is not facilited by AWD or stages in the business process are not mapped correctly in AWD. This dashboard will not work correctly and cannot accommodate this work.**
 
-**NB: All users that are on AWD that who's performance is to be measured must be mapped to a team with an accurate start date in the AWD Queue Mapping Tool (FNZ internal Tool)**
+- All users that are on AWD that who's performance is to be measured must be mapped to a team with an accurate start date in the AWD Queue Mapping Tool (FNZ internal Tool)
