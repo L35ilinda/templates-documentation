@@ -123,6 +123,11 @@ This solution is comprised of the following
 ## Privacy
 *How are we distributing the data? eg. via Embedded Power Bi Dashboards in Sharepoint, SSRS report, MS Teams etc*
 
+## Compliance & Regulatory Specs
+*How are we handling PII? Does it accomodate the client's needs for the 'right to be forgotten' and POPIA?*
+*Is master data not spreading into other tables or structures?*
+
+
 *Considering the distribution and how the data is consumed, what Privacy controls are  implemented to control what data can be seen? eg. RLS via DAX in Power BI, RLS via DAX in Analysis Services*
 
 # Important Notes
