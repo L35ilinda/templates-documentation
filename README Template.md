@@ -1,13 +1,21 @@
-# Introduction 
-The productivity solution is composed of an 
-- An ETL package, 
-- DataWarehouse Tables and views, 
-- An Analysis Services Model & 
-- Power BI dashboard
+# Overview
+*What is the complete solution composed of?*
+*What is in scope of this document?*
+*Where can the other parts be found in the repo?*
+
+*e.g.*
+*The productivity solution is composed of an* 
+- *An ETL package,* 
+- *DataWarehouse Tables and views,* 
+- *An Analysis Services Model &* 
+- *Power BI dashboard*
 
 ## Description of the Solution
 
-*What business process are we measuring? What is the subject of the data model or report? i.e. Queries, Transactions, Work Done by users via AWD etc.*
+*What business process are we measuring?* 
+
+*What is the subject of the data model or report?*
+*i.e. "Queries that are closed", "Transactions processed T - 1", "Work Done by users via AWD" etc.*
 
 *Against what main attributes are we measuring the subject against? e.g. transactions over time, per product, per user etc.*
 
@@ -26,12 +34,15 @@ Each of these stages have work that must be done on each and each are represente
 ## Audience
 *Who is the consumer of the data?*
 
-- FNZ internal Team Leaders and Managers
-- Client Team Leaders and Managers (only SCI & NinetyOne IP at time of writing).
+*What process is consuming the data? Who owns the process that consumes the data*
+
+*e.g.*
+- *FNZ internal Team Leaders and Managers*
+- *Client Team Leaders and Managers (only SCI & NinetyOne IP at time of writing).*
 
 
 
-### In Scope / Out of Scope
+## In Scope / Out of Scope
 *e.g.*
 
 *"This dataset only includes instructions that a closed"*
@@ -42,10 +53,6 @@ Each of these stages have work that must be done on each and each are represente
 
 *"Data does not include instructions that are open"*
 
-
-## Definition of Work Completed
-
-The measure of one piece of work completed is if a work item (instruction) is moved from one Queue & Status combination to another by a non-system user. In this case we say the user did one piece of work. 
 
 # Getting Started
 This solution is comprised of the following 
